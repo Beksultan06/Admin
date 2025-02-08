@@ -4,53 +4,129 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='GalleryArchivalPhotos',
+            name="GalleryArchivalPhotos",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('image', models.ImageField(upload_to='gallery_photos/')),
-                ('image_ru', models.ImageField(null=True, upload_to='gallery_photos/')),
-                ('image_ky', models.ImageField(null=True, upload_to='gallery_photos/')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("image", models.ImageField(upload_to="gallery_photos/")),
+                ("image_ru", models.ImageField(null=True, upload_to="gallery_photos/")),
+                ("image_ky", models.ImageField(null=True, upload_to="gallery_photos/")),
             ],
             options={
-                'verbose_name': 'Галерея Архивного Фото',
-                'verbose_name_plural': 'Галерея Архивных Фото',
+                "verbose_name": "Галерея Архивного Фото",
+                "verbose_name_plural": "Галерея Архивных Фото",
             },
         ),
         migrations.CreateModel(
-            name='GalleryNewShapes',
+            name="GalleryNewShapes",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('image', models.ImageField(upload_to='gallery_photos/', verbose_name='Изоброжение новых фигур')),
-                ('image_ru', models.ImageField(null=True, upload_to='gallery_photos/', verbose_name='Изоброжение новых фигур')),
-                ('image_ky', models.ImageField(null=True, upload_to='gallery_photos/', verbose_name='Изоброжение новых фигур')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "image",
+                    models.ImageField(
+                        upload_to="gallery_photos/",
+                        verbose_name="Изоброжение новых фигур",
+                    ),
+                ),
+                (
+                    "image_ru",
+                    models.ImageField(
+                        null=True,
+                        upload_to="gallery_photos/",
+                        verbose_name="Изоброжение новых фигур",
+                    ),
+                ),
+                (
+                    "image_ky",
+                    models.ImageField(
+                        null=True,
+                        upload_to="gallery_photos/",
+                        verbose_name="Изоброжение новых фигур",
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Галерея новой фигуры',
-                'verbose_name_plural': 'Галерея новых фигур',
+                "verbose_name": "Галерея новой фигуры",
+                "verbose_name_plural": "Галерея новых фигур",
             },
         ),
         migrations.CreateModel(
-            name='GalleryOshTour',
+            name="GalleryOshTour",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(max_length=135, verbose_name='Заголовок Изображений')),
-                ('title_ru', models.CharField(max_length=135, null=True, verbose_name='Заголовок Изображений')),
-                ('title_ky', models.CharField(max_length=135, null=True, verbose_name='Заголовок Изображений')),
-                ('image', models.ImageField(upload_to='gallery_images/', verbose_name='Изображение')),
-                ('image_ru', models.ImageField(null=True, upload_to='gallery_images/', verbose_name='Изображение')),
-                ('image_ky', models.ImageField(null=True, upload_to='gallery_images/', verbose_name='Изображение')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "title",
+                    models.CharField(
+                        max_length=135, verbose_name="Заголовок Изображений"
+                    ),
+                ),
+                (
+                    "title_ru",
+                    models.CharField(
+                        max_length=135, null=True, verbose_name="Заголовок Изображений"
+                    ),
+                ),
+                (
+                    "title_ky",
+                    models.CharField(
+                        max_length=135, null=True, verbose_name="Заголовок Изображений"
+                    ),
+                ),
+                (
+                    "image",
+                    models.ImageField(
+                        upload_to="gallery_images/", verbose_name="Изображение"
+                    ),
+                ),
+                (
+                    "image_ru",
+                    models.ImageField(
+                        null=True,
+                        upload_to="gallery_images/",
+                        verbose_name="Изображение",
+                    ),
+                ),
+                (
+                    "image_ky",
+                    models.ImageField(
+                        null=True,
+                        upload_to="gallery_images/",
+                        verbose_name="Изображение",
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Галерея Ош Тур',
-                'verbose_name_plural': 'Галерея Ош Тура',
+                "verbose_name": "Галерея Ош Тур",
+                "verbose_name_plural": "Галерея Ош Тура",
             },
         ),
     ]

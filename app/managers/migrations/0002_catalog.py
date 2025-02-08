@@ -5,28 +5,54 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('managers', '0001_initial'),
+        ("managers", "0001_initial"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Catalog',
+            name="Catalog",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(max_length=100, verbose_name='Заголовок')),
-                ('title_ru', models.CharField(max_length=100, null=True, verbose_name='Заголовок')),
-                ('title_ky', models.CharField(max_length=100, null=True, verbose_name='Заголовок')),
-                ('description', ckeditor.fields.RichTextField(verbose_name='Описание')),
-                ('description_ru', ckeditor.fields.RichTextField(null=True, verbose_name='Описание')),
-                ('description_ky', ckeditor.fields.RichTextField(null=True, verbose_name='Описание')),
-                ('date', models.TimeField(verbose_name='Время')),
-                ('image', models.ImageField(upload_to='managers_img/', verbose_name='Фото')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("title", models.CharField(max_length=100, verbose_name="Заголовок")),
+                (
+                    "title_ru",
+                    models.CharField(
+                        max_length=100, null=True, verbose_name="Заголовок"
+                    ),
+                ),
+                (
+                    "title_ky",
+                    models.CharField(
+                        max_length=100, null=True, verbose_name="Заголовок"
+                    ),
+                ),
+                ("description", ckeditor.fields.RichTextField(verbose_name="Описание")),
+                (
+                    "description_ru",
+                    ckeditor.fields.RichTextField(null=True, verbose_name="Описание"),
+                ),
+                (
+                    "description_ky",
+                    ckeditor.fields.RichTextField(null=True, verbose_name="Описание"),
+                ),
+                ("date", models.TimeField(verbose_name="Время")),
+                (
+                    "image",
+                    models.ImageField(upload_to="managers_img/", verbose_name="Фото"),
+                ),
             ],
             options={
-                'verbose_name': 'Каталог',
-                'verbose_name_plural': 'Каталоги',
+                "verbose_name": "Каталог",
+                "verbose_name_plural": "Каталоги",
             },
         ),
     ]
