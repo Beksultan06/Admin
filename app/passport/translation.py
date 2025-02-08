@@ -7,57 +7,57 @@ from app.passport.models import *
 @register(Passport)
 class PassportTranslationOptions(TranslationOptions):
     fields = (
-        'title',
-        'description',
+        "title",
+        "description",
     )
+
 
 @register(GeneralInformation)
 class GeneralInformationTranslationOptions(TranslationOptions):
     fields = (
-        'title',
-        'description',
+        "title",
+        "description",
     )
+
 
 @register(Info)
 class InfoTranslationOptions(TranslationOptions):
     fields = (
-        'title',
-        'description',
+        "title",
+        "description",
     )
-
 
 
 @register(HeadPersonality)
 class HeadPersonalityTranslationOptions(TranslationOptions):
-    fields = (
-        'title_personality',
-    )
+    fields = ("title_personality",)
 
 
 @register(Personality)
 class PersonalityTranslationOptions(TranslationOptions):
     fields = (
-        'name_person',
-        'description_person',
-        'all_description_person',
+        "name_person",
+        "description_person",
+        "all_description_person",
     )
+
 
 @register(History)
 class HistoryTranslationOptions(TranslationOptions):
     fields = (
-        'title',
-        'description',
+        "title",
+        "description",
     )
+
 
 @register(Map)
 class Map(TranslationOptions):
-    fields = (
-        'title',
-    )
+    fields = ("title",)
+
 
 @register(Vacancy)
 class VacancyTranslationOptions(TranslationOptions):
     fields = (
-        'title',
-        'description',
+        "title",
+        "description",
     )

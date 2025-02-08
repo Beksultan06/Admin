@@ -5,127 +5,355 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='GeneralInformation',
+            name="GeneralInformation",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(max_length=135, verbose_name='Заголовок')),
-                ('title_ru', models.CharField(max_length=135, null=True, verbose_name='Заголовок')),
-                ('title_ky', models.CharField(max_length=135, null=True, verbose_name='Заголовок')),
-                ('description', ckeditor.fields.RichTextField(verbose_name='Описание Общей Информации')),
-                ('description_ru', ckeditor.fields.RichTextField(null=True, verbose_name='Описание Общей Информации')),
-                ('description_ky', ckeditor.fields.RichTextField(null=True, verbose_name='Описание Общей Информации')),
-                ('image', models.ImageField(upload_to='images/', verbose_name='Изображение')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("title", models.CharField(max_length=135, verbose_name="Заголовок")),
+                (
+                    "title_ru",
+                    models.CharField(
+                        max_length=135, null=True, verbose_name="Заголовок"
+                    ),
+                ),
+                (
+                    "title_ky",
+                    models.CharField(
+                        max_length=135, null=True, verbose_name="Заголовок"
+                    ),
+                ),
+                (
+                    "description",
+                    ckeditor.fields.RichTextField(
+                        verbose_name="Описание Общей Информации"
+                    ),
+                ),
+                (
+                    "description_ru",
+                    ckeditor.fields.RichTextField(
+                        null=True, verbose_name="Описание Общей Информации"
+                    ),
+                ),
+                (
+                    "description_ky",
+                    ckeditor.fields.RichTextField(
+                        null=True, verbose_name="Описание Общей Информации"
+                    ),
+                ),
+                (
+                    "image",
+                    models.ImageField(upload_to="images/", verbose_name="Изображение"),
+                ),
             ],
             options={
-                'verbose_name': 'Общая Информация',
-                'verbose_name_plural': 'Общая Информация',
+                "verbose_name": "Общая Информация",
+                "verbose_name_plural": "Общая Информация",
             },
         ),
         migrations.CreateModel(
-            name='HeadPersonality',
+            name="HeadPersonality",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title_personality', models.CharField(max_length=100, verbose_name='Заголовок ВЛР ')),
-                ('title_personality_ru', models.CharField(max_length=100, null=True, verbose_name='Заголовок ВЛР ')),
-                ('title_personality_ky', models.CharField(max_length=100, null=True, verbose_name='Заголовок ВЛР ')),
-                ('image_personality', models.ImageField(upload_to='personalities/', verbose_name='Изображение ВЛР')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "title_personality",
+                    models.CharField(max_length=100, verbose_name="Заголовок ВЛР "),
+                ),
+                (
+                    "title_personality_ru",
+                    models.CharField(
+                        max_length=100, null=True, verbose_name="Заголовок ВЛР "
+                    ),
+                ),
+                (
+                    "title_personality_ky",
+                    models.CharField(
+                        max_length=100, null=True, verbose_name="Заголовок ВЛР "
+                    ),
+                ),
+                (
+                    "image_personality",
+                    models.ImageField(
+                        upload_to="personalities/", verbose_name="Изображение ВЛР"
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Выдвющиеся личности района',
-                'verbose_name_plural': 'Выдвющиеся личности района',
+                "verbose_name": "Выдвющиеся личности района",
+                "verbose_name_plural": "Выдвющиеся личности района",
             },
         ),
         migrations.CreateModel(
-            name='History',
+            name="History",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(max_length=255, verbose_name='Заголовок для "История района"')),
-                ('title_ru', models.CharField(max_length=255, null=True, verbose_name='Заголовок для "История района"')),
-                ('title_ky', models.CharField(max_length=255, null=True, verbose_name='Заголовок для "История района"')),
-                ('image', models.ImageField(upload_to='history_images/', verbose_name='Фото для "История айона"')),
-                ('description', ckeditor.fields.RichTextField(verbose_name='Описание для "История района"')),
-                ('description_ru', ckeditor.fields.RichTextField(null=True, verbose_name='Описание для "История района"')),
-                ('description_ky', ckeditor.fields.RichTextField(null=True, verbose_name='Описание для "История района"')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "title",
+                    models.CharField(
+                        max_length=255, verbose_name='Заголовок для "История района"'
+                    ),
+                ),
+                (
+                    "title_ru",
+                    models.CharField(
+                        max_length=255,
+                        null=True,
+                        verbose_name='Заголовок для "История района"',
+                    ),
+                ),
+                (
+                    "title_ky",
+                    models.CharField(
+                        max_length=255,
+                        null=True,
+                        verbose_name='Заголовок для "История района"',
+                    ),
+                ),
+                (
+                    "image",
+                    models.ImageField(
+                        upload_to="history_images/",
+                        verbose_name='Фото для "История айона"',
+                    ),
+                ),
+                (
+                    "description",
+                    ckeditor.fields.RichTextField(
+                        verbose_name='Описание для "История района"'
+                    ),
+                ),
+                (
+                    "description_ru",
+                    ckeditor.fields.RichTextField(
+                        null=True, verbose_name='Описание для "История района"'
+                    ),
+                ),
+                (
+                    "description_ky",
+                    ckeditor.fields.RichTextField(
+                        null=True, verbose_name='Описание для "История района"'
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'История района',
-                'verbose_name_plural': 'История районов',
+                "verbose_name": "История района",
+                "verbose_name_plural": "История районов",
             },
         ),
         migrations.CreateModel(
-            name='Info',
+            name="Info",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.TextField(verbose_name='Заголовок')),
-                ('title_ru', models.TextField(null=True, verbose_name='Заголовок')),
-                ('title_ky', models.TextField(null=True, verbose_name='Заголовок')),
-                ('image', models.ImageField(upload_to='op/')),
-                ('description', ckeditor.fields.RichTextField(verbose_name='Описание')),
-                ('description_ru', ckeditor.fields.RichTextField(null=True, verbose_name='Описание')),
-                ('description_ky', ckeditor.fields.RichTextField(null=True, verbose_name='Описание')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("title", models.TextField(verbose_name="Заголовок")),
+                ("title_ru", models.TextField(null=True, verbose_name="Заголовок")),
+                ("title_ky", models.TextField(null=True, verbose_name="Заголовок")),
+                ("image", models.ImageField(upload_to="op/")),
+                ("description", ckeditor.fields.RichTextField(verbose_name="Описание")),
+                (
+                    "description_ru",
+                    ckeditor.fields.RichTextField(null=True, verbose_name="Описание"),
+                ),
+                (
+                    "description_ky",
+                    ckeditor.fields.RichTextField(null=True, verbose_name="Описание"),
+                ),
             ],
             options={
-                'verbose_name': 'Айылных маймаков',
-                'verbose_name_plural': 'Айылных маймаков',
+                "verbose_name": "Айылных маймаков",
+                "verbose_name_plural": "Айылных маймаков",
             },
         ),
         migrations.CreateModel(
-            name='Map',
+            name="Map",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.TextField(verbose_name='Заголовок')),
-                ('title_ru', models.TextField(null=True, verbose_name='Заголовок')),
-                ('title_ky', models.TextField(null=True, verbose_name='Заголовок')),
-                ('image', models.ImageField(upload_to='locations/')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("title", models.TextField(verbose_name="Заголовок")),
+                ("title_ru", models.TextField(null=True, verbose_name="Заголовок")),
+                ("title_ky", models.TextField(null=True, verbose_name="Заголовок")),
+                ("image", models.ImageField(upload_to="locations/")),
             ],
             options={
-                'verbose_name': '',
-                'verbose_name_plural': 'Карта района',
+                "verbose_name": "",
+                "verbose_name_plural": "Карта района",
             },
         ),
         migrations.CreateModel(
-            name='Passport',
+            name="Passport",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(max_length=255, verbose_name='Заголовок для "Паспорт района"')),
-                ('title_ru', models.CharField(max_length=255, null=True, verbose_name='Заголовок для "Паспорт района"')),
-                ('title_ky', models.CharField(max_length=255, null=True, verbose_name='Заголовок для "Паспорт района"')),
-                ('image', models.ImageField(upload_to='passport_images/', verbose_name='Фото для "Паспорт района"')),
-                ('description', ckeditor.fields.RichTextField(verbose_name='Описание для "Паспорт района"')),
-                ('description_ru', ckeditor.fields.RichTextField(null=True, verbose_name='Описание для "Паспорт района"')),
-                ('description_ky', ckeditor.fields.RichTextField(null=True, verbose_name='Описание для "Паспорт района"')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "title",
+                    models.CharField(
+                        max_length=255, verbose_name='Заголовок для "Паспорт района"'
+                    ),
+                ),
+                (
+                    "title_ru",
+                    models.CharField(
+                        max_length=255,
+                        null=True,
+                        verbose_name='Заголовок для "Паспорт района"',
+                    ),
+                ),
+                (
+                    "title_ky",
+                    models.CharField(
+                        max_length=255,
+                        null=True,
+                        verbose_name='Заголовок для "Паспорт района"',
+                    ),
+                ),
+                (
+                    "image",
+                    models.ImageField(
+                        upload_to="passport_images/",
+                        verbose_name='Фото для "Паспорт района"',
+                    ),
+                ),
+                (
+                    "description",
+                    ckeditor.fields.RichTextField(
+                        verbose_name='Описание для "Паспорт района"'
+                    ),
+                ),
+                (
+                    "description_ru",
+                    ckeditor.fields.RichTextField(
+                        null=True, verbose_name='Описание для "Паспорт района"'
+                    ),
+                ),
+                (
+                    "description_ky",
+                    ckeditor.fields.RichTextField(
+                        null=True, verbose_name='Описание для "Паспорт района"'
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Паспорт района',
-                'verbose_name_plural': 'Паспорта районов',
+                "verbose_name": "Паспорт района",
+                "verbose_name_plural": "Паспорта районов",
             },
         ),
         migrations.CreateModel(
-            name='Personality',
+            name="Personality",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name_person', models.CharField(max_length=100, verbose_name='Имя личности')),
-                ('name_person_ru', models.CharField(max_length=100, null=True, verbose_name='Имя личности')),
-                ('name_person_ky', models.CharField(max_length=100, null=True, verbose_name='Имя личности')),
-                ('description_person', models.TextField(verbose_name='Описание личности')),
-                ('description_person_ru', models.TextField(null=True, verbose_name='Описание личности')),
-                ('description_person_ky', models.TextField(null=True, verbose_name='Описание личности')),
-                ('image_person', models.ImageField(upload_to='personalities/', verbose_name='Изображение личности')),
-                ('all_description_person', ckeditor.fields.RichTextField(verbose_name='Полное описание личности')),
-                ('all_description_person_ru', ckeditor.fields.RichTextField(null=True, verbose_name='Полное описание личности')),
-                ('all_description_person_ky', ckeditor.fields.RichTextField(null=True, verbose_name='Полное описание личности')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "name_person",
+                    models.CharField(max_length=100, verbose_name="Имя личности"),
+                ),
+                (
+                    "name_person_ru",
+                    models.CharField(
+                        max_length=100, null=True, verbose_name="Имя личности"
+                    ),
+                ),
+                (
+                    "name_person_ky",
+                    models.CharField(
+                        max_length=100, null=True, verbose_name="Имя личности"
+                    ),
+                ),
+                (
+                    "description_person",
+                    models.TextField(verbose_name="Описание личности"),
+                ),
+                (
+                    "description_person_ru",
+                    models.TextField(null=True, verbose_name="Описание личности"),
+                ),
+                (
+                    "description_person_ky",
+                    models.TextField(null=True, verbose_name="Описание личности"),
+                ),
+                (
+                    "image_person",
+                    models.ImageField(
+                        upload_to="personalities/", verbose_name="Изображение личности"
+                    ),
+                ),
+                (
+                    "all_description_person",
+                    ckeditor.fields.RichTextField(
+                        verbose_name="Полное описание личности"
+                    ),
+                ),
+                (
+                    "all_description_person_ru",
+                    ckeditor.fields.RichTextField(
+                        null=True, verbose_name="Полное описание личности"
+                    ),
+                ),
+                (
+                    "all_description_person_ky",
+                    ckeditor.fields.RichTextField(
+                        null=True, verbose_name="Полное описание личности"
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Личность',
-                'verbose_name_plural': 'Личности',
+                "verbose_name": "Личность",
+                "verbose_name_plural": "Личности",
             },
         ),
     ]

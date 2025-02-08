@@ -4,57 +4,80 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('news', '0001_initial'),
+        ("news", "0001_initial"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='AboutNok',
+            name="AboutNok",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('description', models.TextField()),
-                ('description_ru', models.TextField(null=True)),
-                ('description_ky', models.TextField(null=True)),
-                ('image', models.ImageField(upload_to='about-nok/')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("description", models.TextField()),
+                ("description_ru", models.TextField(null=True)),
+                ("description_ky", models.TextField(null=True)),
+                ("image", models.ImageField(upload_to="about-nok/")),
             ],
             options={
-                'verbose_name': 'О Нокатской область',
-                'verbose_name_plural': 'О Нокатской область',
+                "verbose_name": "О Нокатской область",
+                "verbose_name_plural": "О Нокатской область",
             },
         ),
         migrations.CreateModel(
-            name='NewsNok',
+            name="NewsNok",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.TextField()),
-                ('title_ru', models.TextField(null=True)),
-                ('title_ky', models.TextField(null=True)),
-                ('description', models.TextField()),
-                ('description_ru', models.TextField(null=True)),
-                ('description_ky', models.TextField(null=True)),
-                ('date', models.CharField(max_length=225)),
-                ('date_ru', models.CharField(max_length=225, null=True)),
-                ('date_ky', models.CharField(max_length=225, null=True)),
-                ('photo', models.ImageField(upload_to='news-nok/')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("title", models.TextField()),
+                ("title_ru", models.TextField(null=True)),
+                ("title_ky", models.TextField(null=True)),
+                ("description", models.TextField()),
+                ("description_ru", models.TextField(null=True)),
+                ("description_ky", models.TextField(null=True)),
+                ("date", models.CharField(max_length=225)),
+                ("date_ru", models.CharField(max_length=225, null=True)),
+                ("date_ky", models.CharField(max_length=225, null=True)),
+                ("photo", models.ImageField(upload_to="news-nok/")),
             ],
             options={
-                'verbose_name': 'Новость Нокатская область',
-                'verbose_name_plural': 'Новости Нокатская область',
+                "verbose_name": "Новость Нокатская область",
+                "verbose_name_plural": "Новости Нокатская область",
             },
         ),
         migrations.CreateModel(
-            name='TourismNok',
+            name="TourismNok",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.TextField()),
-                ('title_ru', models.TextField(null=True)),
-                ('title_ky', models.TextField(null=True)),
-                ('description', models.TextField()),
-                ('description_ru', models.TextField(null=True)),
-                ('description_ky', models.TextField(null=True)),
-                ('image', models.ImageField(upload_to='tourism-nok/')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("title", models.TextField()),
+                ("title_ru", models.TextField(null=True)),
+                ("title_ky", models.TextField(null=True)),
+                ("description", models.TextField()),
+                ("description_ru", models.TextField(null=True)),
+                ("description_ky", models.TextField(null=True)),
+                ("image", models.ImageField(upload_to="tourism-nok/")),
             ],
         ),
     ]

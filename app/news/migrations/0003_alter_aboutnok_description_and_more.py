@@ -5,145 +5,172 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('news', '0002_aboutnok_newsnok_tourismnok'),
+        ("news", "0002_aboutnok_newsnok_tourismnok"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='aboutnok',
-            name='description',
+            model_name="aboutnok",
+            name="description",
             field=ckeditor.fields.RichTextField(),
         ),
         migrations.AlterField(
-            model_name='aboutnok',
-            name='description_ky',
+            model_name="aboutnok",
+            name="description_ky",
             field=ckeditor.fields.RichTextField(null=True),
         ),
         migrations.AlterField(
-            model_name='aboutnok',
-            name='description_ru',
+            model_name="aboutnok",
+            name="description_ru",
             field=ckeditor.fields.RichTextField(null=True),
         ),
         migrations.AlterField(
-            model_name='media',
-            name='description_media',
-            field=ckeditor.fields.RichTextField(verbose_name='Описание СМИ страницы "Новости"'),
+            model_name="media",
+            name="description_media",
+            field=ckeditor.fields.RichTextField(
+                verbose_name='Описание СМИ страницы "Новости"'
+            ),
         ),
         migrations.AlterField(
-            model_name='media',
-            name='description_media_ky',
-            field=ckeditor.fields.RichTextField(null=True, verbose_name='Описание СМИ страницы "Новости"'),
+            model_name="media",
+            name="description_media_ky",
+            field=ckeditor.fields.RichTextField(
+                null=True, verbose_name='Описание СМИ страницы "Новости"'
+            ),
         ),
         migrations.AlterField(
-            model_name='media',
-            name='description_media_ru',
-            field=ckeditor.fields.RichTextField(null=True, verbose_name='Описание СМИ страницы "Новости"'),
+            model_name="media",
+            name="description_media_ru",
+            field=ckeditor.fields.RichTextField(
+                null=True, verbose_name='Описание СМИ страницы "Новости"'
+            ),
         ),
         migrations.AlterField(
-            model_name='news',
-            name='description_news',
-            field=ckeditor.fields.RichTextField(verbose_name='Описание новостей страницы "Новости"'),
+            model_name="news",
+            name="description_news",
+            field=ckeditor.fields.RichTextField(
+                verbose_name='Описание новостей страницы "Новости"'
+            ),
         ),
         migrations.AlterField(
-            model_name='news',
-            name='description_news_ky',
-            field=ckeditor.fields.RichTextField(null=True, verbose_name='Описание новостей страницы "Новости"'),
+            model_name="news",
+            name="description_news_ky",
+            field=ckeditor.fields.RichTextField(
+                null=True, verbose_name='Описание новостей страницы "Новости"'
+            ),
         ),
         migrations.AlterField(
-            model_name='news',
-            name='description_news_ru',
-            field=ckeditor.fields.RichTextField(null=True, verbose_name='Описание новостей страницы "Новости"'),
+            model_name="news",
+            name="description_news_ru",
+            field=ckeditor.fields.RichTextField(
+                null=True, verbose_name='Описание новостей страницы "Новости"'
+            ),
         ),
         migrations.AlterField(
-            model_name='news',
-            name='first_paragraph',
-            field=ckeditor.fields.RichTextField(verbose_name='Первый абзац детальный просмотр новостей страницы "Новости"'),
+            model_name="news",
+            name="first_paragraph",
+            field=ckeditor.fields.RichTextField(
+                verbose_name='Первый абзац детальный просмотр новостей страницы "Новости"'
+            ),
         ),
         migrations.AlterField(
-            model_name='news',
-            name='first_paragraph_ky',
-            field=ckeditor.fields.RichTextField(null=True, verbose_name='Первый абзац детальный просмотр новостей страницы "Новости"'),
+            model_name="news",
+            name="first_paragraph_ky",
+            field=ckeditor.fields.RichTextField(
+                null=True,
+                verbose_name='Первый абзац детальный просмотр новостей страницы "Новости"',
+            ),
         ),
         migrations.AlterField(
-            model_name='news',
-            name='first_paragraph_ru',
-            field=ckeditor.fields.RichTextField(null=True, verbose_name='Первый абзац детальный просмотр новостей страницы "Новости"'),
+            model_name="news",
+            name="first_paragraph_ru",
+            field=ckeditor.fields.RichTextField(
+                null=True,
+                verbose_name='Первый абзац детальный просмотр новостей страницы "Новости"',
+            ),
         ),
         migrations.AlterField(
-            model_name='news',
-            name='second_paragraph',
-            field=ckeditor.fields.RichTextField(verbose_name='Второй абзац детальный просмотр новостей страницы "Новости"'),
+            model_name="news",
+            name="second_paragraph",
+            field=ckeditor.fields.RichTextField(
+                verbose_name='Второй абзац детальный просмотр новостей страницы "Новости"'
+            ),
         ),
         migrations.AlterField(
-            model_name='news',
-            name='second_paragraph_ky',
-            field=ckeditor.fields.RichTextField(null=True, verbose_name='Второй абзац детальный просмотр новостей страницы "Новости"'),
+            model_name="news",
+            name="second_paragraph_ky",
+            field=ckeditor.fields.RichTextField(
+                null=True,
+                verbose_name='Второй абзац детальный просмотр новостей страницы "Новости"',
+            ),
         ),
         migrations.AlterField(
-            model_name='news',
-            name='second_paragraph_ru',
-            field=ckeditor.fields.RichTextField(null=True, verbose_name='Второй абзац детальный просмотр новостей страницы "Новости"'),
+            model_name="news",
+            name="second_paragraph_ru",
+            field=ckeditor.fields.RichTextField(
+                null=True,
+                verbose_name='Второй абзац детальный просмотр новостей страницы "Новости"',
+            ),
         ),
         migrations.AlterField(
-            model_name='newsnok',
-            name='description',
+            model_name="newsnok",
+            name="description",
             field=ckeditor.fields.RichTextField(),
         ),
         migrations.AlterField(
-            model_name='newsnok',
-            name='description_ky',
+            model_name="newsnok",
+            name="description_ky",
             field=ckeditor.fields.RichTextField(null=True),
         ),
         migrations.AlterField(
-            model_name='newsnok',
-            name='description_ru',
+            model_name="newsnok",
+            name="description_ru",
             field=ckeditor.fields.RichTextField(null=True),
         ),
         migrations.AlterField(
-            model_name='newsnok',
-            name='title',
+            model_name="newsnok",
+            name="title",
             field=ckeditor.fields.RichTextField(),
         ),
         migrations.AlterField(
-            model_name='newsnok',
-            name='title_ky',
+            model_name="newsnok",
+            name="title_ky",
             field=ckeditor.fields.RichTextField(null=True),
         ),
         migrations.AlterField(
-            model_name='newsnok',
-            name='title_ru',
+            model_name="newsnok",
+            name="title_ru",
             field=ckeditor.fields.RichTextField(null=True),
         ),
         migrations.AlterField(
-            model_name='tourismnok',
-            name='description',
+            model_name="tourismnok",
+            name="description",
             field=ckeditor.fields.RichTextField(),
         ),
         migrations.AlterField(
-            model_name='tourismnok',
-            name='description_ky',
+            model_name="tourismnok",
+            name="description_ky",
             field=ckeditor.fields.RichTextField(null=True),
         ),
         migrations.AlterField(
-            model_name='tourismnok',
-            name='description_ru',
+            model_name="tourismnok",
+            name="description_ru",
             field=ckeditor.fields.RichTextField(null=True),
         ),
         migrations.AlterField(
-            model_name='tourismnok',
-            name='title',
+            model_name="tourismnok",
+            name="title",
             field=ckeditor.fields.RichTextField(),
         ),
         migrations.AlterField(
-            model_name='tourismnok',
-            name='title_ky',
+            model_name="tourismnok",
+            name="title_ky",
             field=ckeditor.fields.RichTextField(null=True),
         ),
         migrations.AlterField(
-            model_name='tourismnok',
-            name='title_ru',
+            model_name="tourismnok",
+            name="title_ru",
             field=ckeditor.fields.RichTextField(null=True),
         ),
     ]

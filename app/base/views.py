@@ -6,13 +6,12 @@ from app.base.models import We_Invite_To_View, Gallery
 
 # Create your views here.
 
-class We_Invite_To_ViewViewSet(GenericViewSet, 
-                               mixins.ListModelMixin):
+
+class We_Invite_To_ViewViewSet(GenericViewSet, mixins.ListModelMixin):
     queryset = We_Invite_To_View.objects.all()
     serializer_class = We_Invite_To_ViewSerializers
-    
 
-class GalleryViewSet(GenericViewSet, 
-                               mixins.ListModelMixin):
+
+class GalleryViewSet(GenericViewSet, mixins.ListModelMixin):
     queryset = Gallery.objects.all()
     serializer_class = GallerySerializers
